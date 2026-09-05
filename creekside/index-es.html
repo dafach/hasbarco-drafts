@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- hero-clean-2026-09-04 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Creekside Village — Vivienda asequible para trabajadores agrícolas en Los Alamos, CA</title>
+<meta name="description" content="Apartamentos de 2, 3 y 4 recámaras con restricción de ingresos para trabajadores agrícolas y sus familias en Los Alamos, CA, con preferencia para trabajadores del campo. La renta se basa en sus ingresos. Administrado por la Autoridad de Vivienda del Condado de Santa Bárbara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fs-sm: 0.8125rem;
+    --fs-body: 1.0625rem;
+    --fs-h2: 1.375rem;
+    --fs-h1: 2rem;
+    --navy:#24503a;--navy-700:#183a29;--teal:#4f9a5e;--teal-600:#3c7a49;
+    --sand:#f5efe1;--sand-200:#ece0c8;--sky:#eef5ec;--ink:#1e2a22;--muted:#4c5a50;
+    --line:#dce1da;--white:#ffffff;--amber:#d98324;--focus:#ffb547;
+    --radius:20px;--shadow:0 6px 24px rgba(24,58,41,.13);--maxw:1120px;
+    --font:'DM Sans',"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    --font-head:'Montserrat','DM Sans',"Segoe UI",system-ui,sans-serif;
+  }
+  @media (min-width: 701px) {
+    :root { --fs-h1: 2.25rem; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+  body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);font-size:var(--fs-body);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:var(--font-head);line-height:1.15;color:var(--navy);margin:0 0 .5em;font-weight:800;letter-spacing:-.01em}
+  h1,.hero h1,.h1-m,.h1-d{font-size:var(--fs-h1);line-height:1.2}
+  h2,h3{font-size:var(--fs-h2);line-height:1.25}
+  h3{letter-spacing:0}
+  p{margin:0 0 1rem}
+  a{color:var(--teal-600)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:clamp(2.5rem,6vw,5rem) 0}
+  .lead{font-size:var(--fs-body);color:var(--muted);max-width:62ch}
+  .skip{position:absolute;left:0;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;background:var(--navy);color:#fff;z-index:200;border-radius:0 0 8px 0}
+  .skip:focus{width:auto;height:auto;padding:12px 18px;clip-path:none;white-space:normal}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tbd{display:inline-block;background:#fff3d6;border:1px dashed #d98324;color:#8a5008;padding:0 .4em;border-radius:6px;font-weight:700;font-size:var(--fs-sm);white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:.7em 1.5em;border-radius:12px;font-size:var(--fs-body);font-weight:700;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .12s, background .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--amber);color:#2a1700}
+  .btn-primary:hover{background:#c5741b}
+  .btn-secondary{background:var(--navy);color:#fff}
+  .btn-secondary:hover{background:var(--navy-700)}
+  .btn-ghost{background:transparent;border-color:#fff;color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-block{width:100%}
+  header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:saturate(120%) blur(6px)}
+  .bar{display:flex;align-items:center;gap:16px;min-height:74px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800}
+  .brand .mark{width:42px;height:42px;flex:0 0 auto;border-radius:10px;background:var(--teal);display:grid;place-items:center;color:#fff;font-size:var(--fs-h2)}
+  .brand b{font-size:var(--fs-body);line-height:1}
+  .brand span{display:block;font-size:var(--fs-sm);font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .bar .spacer{flex:1}
+  .callbar{display:flex;align-items:center;gap:14px}
+  .callbar a.tel{font-weight:800;color:var(--navy);text-decoration:none;font-size:var(--fs-body);white-space:nowrap}
+  .callbar a.tel:hover{color:var(--teal-600)}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang a{border:0;background:#fff;padding:.45em .9em;font-weight:700;cursor:pointer;color:var(--muted);min-height:40px;display:inline-flex;align-items:center;text-decoration:none}
+  .lang a[aria-current="page"]{background:var(--navy);color:#fff}
+  @media(max-width:860px){ .callbar a.tel span.word{display:none} .bar{gap:10px} }
+
+
+  /* Dual hero: desktop shows .h1-d; mobile swaps short H1. Dek uses .hero-dek-d at all breakpoints. */
+  .h1-m { display:none }
+  .h1-d { display:inline }
+  .hero-dek-d { display:block }
+  .brand .full-name { display:inline }
+
+  /* ---------- Mobile header + sticky call bar (max 700px) ---------- */
+  .mob-callbar{display:none}
+  @media(max-width:700px){
+    .callbar a.tel{display:none}
+    .header-cta{display:none}
+    .bar{flex-wrap:nowrap}
+    .brand{min-width:0;white-space:nowrap;overflow:hidden}
+    .callbar{flex-shrink:0}
+    .lang a{min-height:44px;min-width:44px;justify-content:center}
+    body{padding-bottom:calc(88px + env(safe-area-inset-bottom, 0px))}
+    .mob-callbar{display:block;position:fixed;bottom:0;left:0;right:0;z-index:200;
+      padding:8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+      background:#fff;box-shadow:0 -6px 24px rgba(0,0,0,.16)}
+    .mob-callbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:56px;width:100%;text-decoration:none;font-weight:800;font-size:var(--fs-body);
+      line-height:1.2;border-radius:12px;padding:.55em 1em;text-align:center}
+    .mob-callbar a{background:var(--amber);color:#2a1700}
+    .mob-callbar a small{display:block;font-size:var(--fs-sm);font-weight:600;margin-top:.12em;opacity:.92}
+    .brand .full-name, .full-name { display:none }
+    .h1-d { display:none }
+    .h1-m { display:inline }
+    .brand { overflow:visible; min-width:0; }
+    header .wrap { padding-left:20px; padding-right:20px; }
+
+  }
+  @media(max-width:560px){ .brand b + span{display:none} }
+  .hero{position:relative;color:#fff;background:#183a29}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,25,.55),rgba(15,35,25,.80)),url("assets/photos/living-room.jpg") center/cover no-repeat;}
+  .hero .wrap{position:relative;padding-top:clamp(4rem,9vw,7rem);padding-bottom:clamp(4rem,9vw,7rem)}
+  .hero h1{color:#fff;max-width:18ch}
+  .hero .kicker{display:inline-block;background:var(--teal);color:#fff;font-weight:700;padding:.35em .9em;border-radius:999px;font-size:var(--fs-sm);margin-bottom:1rem;letter-spacing:.02em}
+  .hero p{font-size:var(--fs-body);max-width:56ch;color:#eef4ef}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:.6rem}
+
+  /* Mobile first-screen air (must follow desktop .hero rules so it wins) */
+  @media(max-width:700px){
+    .hero .wrap { padding: 28px 22px calc(36px + 80px + env(safe-area-inset-bottom, 0px)); }
+    .hero h1 { max-width:none; letter-spacing:-0.02em; margin: 0 0 0.7rem; text-wrap:balance; }
+    .hero-dek-d { max-width:36ch; margin:0 0 1.15rem; color:#eef4f7; }
+    .hero .kicker { margin-bottom:0.85rem; }
+    .hero-cta{display:flex;flex-direction:column;gap:10px;margin-top:1rem;width:100%;max-width:22rem}
+    .hero-cta .btn{width:100%}
+  }
+
+  .badges{background:var(--sand);border-bottom:1px solid var(--sand-200)}
+  .badges .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:1.6rem 0}
+  .badge{display:flex;gap:12px;align-items:flex-start}
+  .badge .ic{font-size:var(--fs-h2);line-height:1}
+  .badge b{display:block;color:var(--navy)}
+  .badge small{color:var(--muted);font-size:var(--fs-sm)}
+  @media(max-width:760px){.badges .grid{grid-template-columns:1fr;gap:14px}}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:2rem}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+  .step .num{width:42px;height:42px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:.8rem;font-size:var(--fs-body)}
+  .step h3{margin-bottom:.25rem}
+  .step p{margin:0;font-size:var(--fs-body);color:var(--muted)}
+  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.steps{grid-template-columns:1fr}}
+  .sec-sky{background:var(--sky)}
+  .units{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:2rem}
+  .unit{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .unit img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .unit .body{padding:1.2rem 1.2rem 1.4rem;display:flex;flex-direction:column;flex:1}
+  .unit h3{margin-bottom:.3rem}
+  .unit .meta{color:var(--muted);font-size:var(--fs-body);margin-bottom:.6rem}
+  .unit .rent{font-size:var(--fs-body);font-weight:800;color:var(--navy);margin-top:auto}
+  .unit .rent small{font-size:var(--fs-sm);font-weight:600;color:var(--muted);display:block}
+  .tag{display:inline-block;background:var(--sand);color:#6a4a16;font-weight:700;border-radius:6px;padding:.1em .6em;font-size:var(--fs-sm);margin-bottom:.5rem}
+  @media(max-width:860px){.units{grid-template-columns:1fr}}
+  .qualify{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+  .qualify table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:var(--fs-body)}
+  .qualify th,.qualify td{text-align:left;padding:.7em .6em;border-bottom:1px solid var(--line)}
+  .qualify th{color:var(--navy)}
+  .callout{background:var(--sand);border-radius:var(--radius);padding:1.6rem;border:1px solid var(--sand-200)}
+  .callout h3{margin-top:0}
+  .check{list-style:none;padding:0;margin:0}
+  .check li{padding:.35em 0 .35em 1.9em;position:relative}
+  .check li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+  @media(max-width:820px){.qualify{grid-template-columns:1fr;gap:24px}}
+  .amen{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2rem}
+  .amen div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem;text-align:center;font-weight:600}
+  .amen .ic{font-size:var(--fs-h2);display:block;margin-bottom:.4rem}
+  @media(max-width:860px){.amen{grid-template-columns:1fr 1fr}}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:2rem}
+  .gallery a{border-radius:20px;overflow:hidden;display:block}
+  .gallery img{aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .3s}
+  .gallery a:hover img{transform:scale(1.05)}
+  .gallery .tall{grid-row:span 2;aspect-ratio:auto;height:100%}
+  @media(max-width:680px){.gallery{grid-template-columns:1fr 1fr}}
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .loc .map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:320px}
+  .loc iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+  @media(max-width:820px){.loc{grid-template-columns:1fr}}
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  .faq summary{cursor:pointer;padding:1.1rem 1.3rem;font-weight:700;color:var(--navy);font-size:var(--fs-body);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:var(--fs-h2);color:var(--teal);line-height:1}
+  .faq details[open] summary::after{content:"–"}
+  .faq .ans{padding:0 1.3rem 1.2rem;color:var(--muted)}
+  .contact{background:var(--navy);color:#fff}
+  .contact h2{color:#fff}
+  .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .contact .lead{color:#dbe7de}
+  .form{background:#fff;border-radius:var(--radius);padding:1.8rem;color:var(--ink);box-shadow:var(--shadow)}
+  .field{margin-bottom:1.1rem}
+  .field label{display:block;font-weight:700;margin-bottom:.35rem;color:var(--navy)}
+  .field input,.field select,.field textarea{width:100%;min-height:52px;padding:.7em .9em;font-size:var(--fs-body);border:1.5px solid var(--line);border-radius:10px;font-family:inherit;color:var(--ink)}
+  .field textarea{min-height:110px;resize:vertical}
+  .form .note{font-size:var(--fs-sm);color:var(--muted);margin-top:.2rem}
+  .contact-info{font-size:var(--fs-body)}
+  .contact-info a{color:#fff;font-weight:700}
+  .contact-info .row{display:flex;gap:12px;margin-bottom:1rem}
+  .contact-info .ic{font-size:var(--fs-h2);flex:0 0 auto}
+  @media(max-width:820px){.contact .grid{grid-template-columns:1fr;gap:28px}}
+  footer.site{background:#12281c;color:#bcccc0;font-size:var(--fs-sm);padding:2.4rem 0}
+  footer.site a{color:#dbe8df}
+  footer.site .top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;border-bottom:1px solid #274a37;padding-bottom:1.4rem;margin-bottom:1.4rem}
+  .eho{display:flex;align-items:center;gap:12px;max-width:60ch}
+  .eho .ehlogo{flex:0 0 auto;width:46px;height:46px;border:2px solid #bcccc0;border-radius:8px;display:grid;place-items:center;font-size:var(--fs-h2)}
+
+  /* ---------- Typography polish: left-aligned rhythm, no widows ---------- */
+  h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
+  p,li,summary,figcaption,.lead{text-wrap:pretty}
+  .form-success{background:#e8f5ec;border:1.5px solid #2c7a4b;color:#1b4b32;border-radius:12px;padding:1.1rem 1.3rem;font-size:var(--fs-body)}
+
+  /* ---------- Unified type scale (exactly four rem sizes; no clamp/vw on font-size) ---------- */
+  body{font-size:var(--fs-body);line-height:1.5}
+  h1, .hero h1, .h1-m, .h1-d{font-size:var(--fs-h1);line-height:1.2}
+  h2, h3{font-size:var(--fs-h2);line-height:1.25}
+  h3{letter-spacing:0}
+  p, .lead, .hero p, .hero-dek-d, .step p, .btn, .mob-callbar a,
+  .brand b, .contact-info,
+  label, input, select, textarea, .faq, .faq summary, .qualify table, .qualify th, .qualify td,
+  .callbar a.tel, .step .num, .unit .meta, .unit .rent, .form-success, .inline-form input,
+  .badge b{font-size:var(--fs-body)}
+  .kicker, .hero .kicker, .brand span, .brand b + span, footer.site, footer small, footer.site small,
+  .note, .form .note, .lang a, .tbd, .tag, .badge small, .unit .rent small,
+  .mob-callbar a small, .modal .head .ev{font-size:var(--fs-sm)}
+  .brand .mark, .badge .ic, .amen .ic, .contact-info .ic, .eho .ehlogo,
+  .faq summary::after, .modal .close{font-size:var(--fs-h2)}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido principal</a>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Inicio de Creekside Village">
+      <span class="mark" aria-hidden="true">🌾</span>
+      <span><b>Creekside <span class="full-name">Village</span></b><span>Los Alamos · Vivienda para el campo</span></span>
+    </a>
+    <div class="spacer"></div>
+    <div class="callbar">
+      <a class="tel" href="tel:+18059778817"><span class="word">Llame </span>(805) 977-8817</a>
+      <div class="lang" role="group" aria-label="Elegir idioma / Choose language">
+        <a href='index.html' lang='en'>EN</a>
+        <a aria-current='page' href='index-es.html' lang='es'>ES</a>
+      </div>
+      <a class="btn btn-primary header-cta" href="tel:+18059778817">Llame al (805) 977-8817</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <span class="kicker">Ahora aceptando solicitudes</span>
+    <h1 id="hero-h">
+      <span class="h1-d">Viviendas asequibles para trabajadores agrícolas y sus familias.</span>
+      <span class="h1-m">Hogares asequibles<br>para familias del campo.</span>
+    </h1>
+    <p class="hero-dek-d">Apartamentos de dos, tres y cuatro recámaras con restricción de ingresos en Los Alamos — con una preferencia para trabajadores del campo que puede adelantar a su familia en la lista de espera.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Vea si califica</a>
+      <a class="btn btn-ghost" href="tel:+18059778817">Llame al (805) 977-8817</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGNIAS ============ -->
+<section class="badges" aria-label="Por qué vivir aquí" style="padding:0">
+  <div class="wrap">
+    <div class="grid">
+      <div class="badge"><span class="ic" aria-hidden="true">🚜</span><div><b>Preferencia para el campo</b><small>El trabajo agrícola puede acortar su espera por una vivienda</small></div></div>
+      <div class="badge"><span class="ic" aria-hidden="true">👨‍👩‍👧‍👦</span><div><b>Espacio para su familia</b><small>Apartamentos de 2, 3 y 4 recámaras para hogares de 2 a 8 personas</small></div></div>
+      <div class="badge"><span class="ic" aria-hidden="true">🤝</span><div><b>Todos pueden solicitar</b><small>NO se requiere comprobante de ciudadanía estadounidense</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO SOLICITAR ============ -->
+<section aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">Cómo solicitar — en tres pasos</h2>
+    <p class="lead">Lo hacemos fácil. La Autoridad de Vivienda del Condado de Santa Bárbara opera estas viviendas — llame y una persona real le ayudará, en español o inglés.</p>
+    <ol class="steps" style="list-style:none;padding:0">
+      <li class="step"><div class="num">1</div><h3>Revise si califica</h3><p>Las viviendas son para familias que ganan dentro de los límites de ingreso — llámenos al <a href="tel:+18059778817">(805) 977-8817</a> y revisamos su hogar en unos minutos.</p></li>
+      <li class="step"><div class="num">2</div><h3>Solicite</h3><p>Si usted o alguien de su hogar trabaja en la agricultura, puede adelantar en la lista — traiga comprobante de trabajo agrícola. Llene una solicitud sencilla en la Oficina de Vivienda de Lompoc, o actualice una que ya empezó.</p></li>
+      <li class="step"><div class="num">3</div><h3>Múdese</h3><p>Cuando se desocupe una vivienda para el tamaño de su familia, firme su contrato y múdese.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ UNIDADES ============ -->
+<section class="sec-sky" id="units" aria-labelledby="units-h">
+  <div class="wrap">
+    <h2 id="units-h">Apartamentos disponibles</h2>
+    <p class="lead">39 viviendas en total — apartamentos bien cuidados de dos, tres y cuatro recámaras en una comunidad tranquila de 3 pisos.</p>
+    <p style="background:#e9f3e6;border-left:4px solid var(--teal);padding:.9rem 1.1rem;border-radius:8px;font-weight:600;margin-top:1rem">🌿 <b>Su renta se basa en sus ingresos.</b> El propietario paga electricidad, agua, alcantarillado, basura e internet — usted solo paga el gas.</p>
+    <div class="units">
+      <article class="unit">
+        <img src="assets/photos/living-room.jpg" alt="Sala amplia y luminosa con escalera, decorada con sofá y tapete">
+        <div class="body">
+          <span class="tag">La mayoría</span>
+          <h3>Dos recámaras</h3>
+          <p class="meta">Para 2 a 5 personas · aproximadamente 1,048 pies²</p>
+          <p class="rent">$1,191–$2,383 / mes<small>Según su nivel de ingresos (30–60% AMI)</small></p>
+        </div>
+      </article>
+      <article class="unit">
+        <img src="assets/photos/interior.jpg" alt="Recámara con ventana grande hacia colinas verdes y clóset amplio">
+        <div class="body">
+          <span class="tag">Más espacio</span>
+          <h3>Tres recámaras</h3>
+          <p class="meta">Para 3 a 7 personas · aproximadamente 1,352 pies²</p>
+          <p class="rent">$1,377–$2,754 / mes<small>Según su nivel de ingresos (30–60% AMI)</small></p>
+        </div>
+      </article>
+      <article class="unit">
+        <img src="assets/photos/bedroom-1.jpg" alt="Recámara alfombrada decorada con cama y mesa de noche">
+        <div class="body">
+          <span class="tag">Las más grandes — solo 3</span>
+          <h3>Cuatro recámaras</h3>
+          <p class="meta">Para 4 a 8 personas · aproximadamente 1,661 pies²</p>
+          <p class="rent">$1,536–$3,072 / mes<small>Según su nivel de ingresos (30–60% AMI)</small></p>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:1rem;color:var(--muted);font-size:var(--fs-sm)">Distribución: 18 de dos recámaras · 18 de tres recámaras · 3 de cuatro recámaras. Muchas tienen rentas más bajas para familias de menores ingresos.</p>
+  </div>
+</section>
+
+<!-- ============ ELEGIBILIDAD ============ -->
+<section aria-labelledby="elig-h">
+  <div class="wrap">
+    <div class="qualify">
+      <div>
+        <h2 id="elig-h">¿Califica usted?</h2>
+        <p class="lead">Creekside tiene restricción de ingresos — la renta está por debajo del mercado para familias dentro de ciertos límites de ingreso. El límite depende de cuántas personas viven en su hogar. Muchos apartamentos están reservados para familias de menores ingresos, así que <b>no se descarte — llámenos y lo revisamos.</b></p>
+        <table>
+          <caption class="visually-hidden">Ingreso máximo del hogar por tamaño de familia</caption>
+          <thead><tr><th scope="col">Personas en su hogar</th><th scope="col">Lo máximo que su familia puede ganar / año</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">2 personas</th><td>hasta $87,420</td></tr>
+            <tr><th scope="row">3 personas</th><td>hasta $98,340</td></tr>
+            <tr><th scope="row">4 personas</th><td>hasta $109,260</td></tr>
+            <tr><th scope="row">5 personas</th><td>hasta $118,020</td></tr>
+            <tr><th scope="row">6 personas</th><td>hasta $126,780</td></tr>
+            <tr><th scope="row">7 personas</th><td>hasta $135,540</td></tr>
+            <tr><th scope="row">8 personas</th><td>hasta $144,240</td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="color:var(--muted);font-size:var(--fs-sm)">Estos son los ingresos más altos que pueden calificar. Muchas viviendas son para familias que ganan mucho menos — si su ingreso es bajo, le animamos aún más a solicitar. ¿No está seguro? Envíe el formulario y lo revisamos por usted.</p>
+      </div>
+      <div class="callout">
+        <h3>🚜 Preferencia para trabajadores agrícolas</h3>
+        <p style="margin-bottom:.6rem">Usted o alguien de su hogar puede calificar para la <b>preferencia de trabajador agrícola</b> en la lista de espera si actualmente trabaja en la agricultura. Esto puede darle una mejor posición y reducir su tiempo de espera. Para verificar, envíe uno de:</p>
+        <ul class="check">
+          <li>Una carta de su empleador agrícola</li>
+          <li>Recibos de pago recientes que demuestren trabajo agrícola</li>
+          <li>Registros de trabajo por cuenta propia relacionados con labores agrícolas</li>
+        </ul>
+        <h3 style="margin-top:1.4rem">Bueno saber</h3>
+        <ul class="check">
+          <li>Depósito de seguridad: dos recámaras $1,269 · tres recámaras $1,534 · cuatro recámaras $1,773</li>
+          <li>No se admiten mascotas</li>
+          <li>Los hogares cuyos integrantes tienen diferente estatus migratorio pueden calificar — pregúntenos</li>
+        </ul>
+        <p style="margin:.9rem 0 0;font-weight:700;color:var(--navy)">NO se requiere comprobante de ciudadanía estadounidense para solicitar.</p>
+        <a class="btn btn-secondary btn-block" href="#contact" style="margin-top:1rem">Pregunte por la preferencia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMODIDADES ============ -->
+<section class="sec-sky" aria-labelledby="amen-h">
+  <div class="wrap">
+    <h2 id="amen-h">Qué está incluido</h2>
+    <p class="lead">Viviendas cómodas del tamaño de una familia con lo esencial — además de espacios compartidos para toda la comunidad.</p>
+    <div class="amen">
+      <div><span class="ic" aria-hidden="true">🍳</span>Cocina completa y electrodomésticos</div>
+      <div><span class="ic" aria-hidden="true">❄️</span>Calefacción y A/C individual</div>
+      <div><span class="ic" aria-hidden="true">🚪</span>Clósets amplios (walk-in)</div>
+      <div><span class="ic" aria-hidden="true">🌇</span>Patio o balcón privado</div>
+      <div><span class="ic" aria-hidden="true">🧺</span>Lavandería en el lugar</div>
+      <div><span class="ic" aria-hidden="true">🛝</span>Área de juegos infantiles</div>
+      <div><span class="ic" aria-hidden="true">🧺</span>Área de picnic y salón comunitario</div>
+      <div><span class="ic" aria-hidden="true">💻</span>Centro de negocios</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section aria-labelledby="gal-h">
+  <div class="wrap">
+    <h2 id="gal-h">Eche un vistazo adentro</h2>
+    <p class="lead">Viviendas limpias, listas para mudarse, con espacio para crecer.</p>
+    <div class="gallery">
+      <a href="assets/photos/living-room.jpg" class="tall" target="_blank" rel="noopener">
+        <img src="assets/photos/living-room.jpg" alt="Sala abierta con escalera y luz natural"></a>
+      <a href="assets/photos/interior.jpg" target="_blank" rel="noopener">
+        <img src="assets/photos/interior.jpg" alt="Recámara con ventana hacia colinas verdes"></a>
+      <a href="assets/photos/bedroom-6.jpg" target="_blank" rel="noopener">
+        <img src="assets/photos/bedroom-6.jpg" alt="Recámara decorada con cama, clóset y cuadro"></a>
+      <a href="assets/photos/bedroom-4.jpg" target="_blank" rel="noopener">
+        <img src="assets/photos/bedroom-4.jpg" alt="Recámara alfombrada con clóset"></a>
+      <a href="assets/photos/bedroom-2.jpg" target="_blank" rel="noopener">
+        <img src="assets/photos/bedroom-2.jpg" alt="Recámara luminosa decorada con ropa de cama"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACIÓN ============ -->
+<section class="sec-sky" aria-labelledby="loc-h">
+  <div class="wrap">
+    <h2 id="loc-h">Dónde vivirá</h2>
+    <div class="loc">
+      <div>
+        <p class="lead">Creekside Village está en Los Alamos, un pueblo pequeño y acogedor junto a la Carretera 101, rodeado de granjas y viñedos — cerca de los campos y a corta distancia de Santa María, Lompoc y Buellton.</p>
+        <p><strong>Dirección:</strong> 260 Gonzalez Dr., Los Alamos, CA 93440</p>
+        <p><strong>Oficina en el sitio:</strong> lunes y miércoles, 10:00 a. m.–4:00 p. m.</p>
+        <p><strong>Oficina de Vivienda de Lompoc (para solicitar):</strong> 817 W. Ocean Ave., Lompoc · lunes a jueves, 10:00 a. m.–4:00 p. m.</p>
+        <p><a class="btn btn-secondary" href="#contact">Contáctenos</a></p>
+      </div>
+      <div class="map">
+        <iframe title="Mapa de Creekside Village en Los Alamos" loading="lazy"
+          src="https://www.google.com/maps?q=260+Gonzalez+Dr,+Los+Alamos,+CA+93440&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap" style="max-width:820px">
+    <h2 id="faq-h">Preguntas frecuentes</h2>
+    <details><summary>¿Quién puede vivir en Creekside Village?</summary><div class="ans">Familias con ingresos dentro de los límites según el tamaño de su hogar. Las viviendas son de dos, tres y cuatro recámaras, para hogares de aproximadamente 2 a 8 personas. Si usted o alguien de su hogar trabaja en la agricultura, puede calificar para una preferencia de trabajador agrícola en la lista de espera.</div></details>
+    <details><summary>¿Tengo que ser trabajador agrícola para solicitar?</summary><div class="ans">No. Cualquier persona que cumpla con los límites de ingreso puede solicitar. Pero si usted o un miembro del hogar trabaja actualmente en la agricultura, puede reclamar una <b>preferencia de trabajador agrícola</b> que puede adelantarlo en la lista y reducir su espera.</div></details>
+    <details><summary>¿Cuánto es la renta?</summary><div class="ans">La renta se basa en sus ingresos y el tamaño del apartamento. Los de dos recámaras van de $1,191 a $2,383/mes, los de tres recámaras de $1,377 a $2,754, y los de cuatro recámaras de $1,536 a $3,072 — con muchas viviendas en el extremo más bajo y más asequible. El propietario paga electricidad, agua, alcantarillado, basura e internet; usted solo paga el gas.</div></details>
+    <details><summary>¿Necesito comprobar ciudadanía estadounidense?</summary><div class="ans">No. No se requiere comprobante de ciudadanía estadounidense para solicitar en Creekside Village.</div></details>
+    <details><summary>¿Qué necesito para solicitar?</summary><div class="ans">Traiga sus documentos de identificación y comprobante de ingresos. Para la preferencia de trabajador agrícola, traiga uno de: una carta de su empleador agrícola, recibos de pago recientes que demuestren trabajo agrícola, o registros de trabajo por cuenta propia relacionados con labores agrícolas. Pregúntenos y lo guiamos.</div></details>
+    <details><summary>¿Me pueden ayudar en español?</summary><div class="ans">Sí — nuestro equipo le puede ayudar en español o inglés. Si usted habla mixteco u otra lengua indígena, podemos coordinar un servicio de intérprete. Escríbanos por el formulario y buscamos a alguien que le pueda ayudar.</div></details>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">¿Listo para solicitar? Veamos si califica.</h2>
+    <div class="grid">
+      <div>
+        <p class="lead">Cuéntenos un poco sobre su familia y nos comunicaremos para revisar si califica y explicarle la preferencia de trabajador agrícola.</p>
+        <div class="contact-info" style="margin-top:1.5rem">
+          <div class="row"><span class="ic" aria-hidden="true">📍</span><div>260 Gonzalez Dr., Los Alamos, CA 93440</div></div>
+          <div class="row"><span class="ic" aria-hidden="true">✉️</span><div><a href="mailto:housingcafe@hasbarco.org">housingcafe@hasbarco.org</a></div></div>
+          <div class="row"><span class="ic" aria-hidden="true">📞</span><div><small>Llámenos. Una persona real contestará.</small><br><a href="tel:+18059778817">(805) 977-8817</a></div></div>
+          <div class="row"><span class="ic" aria-hidden="true">🕘</span><div>En el sitio: lun y mié · Oficina de Lompoc: lun–jue · 10 a. m.–4 p. m.</div></div>
+        </div>
+      </div>
+      <form aria-label='Solicitud de elegibilidad' class='form' method='POST' name='lead-creekside' onsubmit='return leadSubmit(event)'>
+        <input type="hidden" name="form-name" value="lead-creekside">
+        <input type="hidden" name="lang" value="es">
+        <p class="visually-hidden" aria-hidden="true"><label>No llene este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field">
+          <label for="name">Su nombre</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Número de teléfono</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <label for="house">¿Cuántas personas hay en su hogar?</label>
+          <select id="house" name="household">
+            <option value="">Seleccione…</option>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 o más</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ag">¿Alguien en su hogar trabaja en la agricultura?</label>
+          <select id="ag" name="agwork">
+            <option value="">Seleccione…</option>
+            <option>Sí</option><option>No</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">¿Algo que quiera que sepamos? <span style="font-weight:500;color:var(--muted)">(opcional)</span></label>
+          <textarea id="msg" name="message"></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Solicitar una llamada</button>
+        <p class="note">Solo usaremos su información para contactarlo sobre vivienda.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <strong style="color:#fff;font-size:var(--fs-body)">Creekside Village Apartments</strong><br>
+        Administrado por la Autoridad de Vivienda del Condado de Santa Bárbara<br>
+        817 W Ocean Ave, Lompoc, CA 93436
+      </div>
+      <div class="eho">
+        <span class="ehlogo" aria-hidden="true">🏠</span>
+        <small><strong>Igualdad de Oportunidad de Vivienda.</strong> No discriminamos por raza, color, religión, sexo, discapacidad, situación familiar u origen nacional. Adaptaciones razonables disponibles a solicitud.</small>
+      </div>
+    </div>
+    <small>© <span id="yr"></span> Autoridad de Vivienda del Condado de Santa Bárbara.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Envío a Netlify Forms (AJAX — confirmación en línea, sin recargar la página)
+  function leadSubmit(e){
+    e.preventDefault();
+    var f = e.target, btn = f.querySelector('button[type=submit]');
+    if(btn) btn.disabled = true;
+    fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:new URLSearchParams(new FormData(f)).toString()})
+    .then(function(r){
+      if(!r.ok) throw new Error('send failed');
+      var ok = document.createElement('div');
+      ok.className = 'form-success'; ok.setAttribute('role','status');
+      ok.innerHTML = '<strong>¡Gracias!</strong> Recibimos su solicitud. Nuestro equipo le contactará dentro de un día hábil — en inglés o español.';
+      f.replaceWith(ok);
+    })
+    .catch(function(){
+      if(btn) btn.disabled = false;
+      alert('Lo sentimos — no se pudo enviar el formulario. Inténtelo de nuevo en un momento, o llámenos.');
+    });
+    return false;
+  }
+</script>
+<div class="mob-callbar" role="region" aria-label="Llamar">
+  <a href="tel:+18059778817">Llamar (805) 977-8817<small>Una persona real contestará.</small></a>
+</div>
+</body>
+</html>
