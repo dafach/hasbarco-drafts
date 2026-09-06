@@ -40,6 +40,8 @@
   }
   @media (min-width: 701px) {
     :root { --fs-h1: 2.25rem; }
+    .callbar a.tel{display:none}
+    .hero-cta a[href^="tel:"]{display:none}
   }
   /* ---------- Base ---------- */
   *{box-sizing:border-box}
@@ -134,19 +136,20 @@
   }
   @media(max-width:560px){ .brand b + span{display:none} }
   /* ---------- Hero ---------- */
-  .hero{position:relative;color:#fff;background:#0e2c45}
+  .hero{position:relative;color:#fff;background:#0e2c45;min-height:68vh;display:flex;align-items:center}
   .hero::before{content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,rgba(8,24,40,.55),rgba(8,24,40,.78)),
     url("assets/photos/Unit%2066%20-%20studio%20loft/1773097696949788963_1773097696949788963_046.jpg") center/cover no-repeat;}
-  .hero .wrap{position:relative;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(3rem,7vw,5.5rem)}
-  .hero h1{color:#fff;max-width:16ch}
+  .hero .wrap{position:relative;width:100%;padding-top:clamp(4.5rem,10vw,7rem);padding-bottom:clamp(4.5rem,10vw,7rem);display:flex;flex-direction:column;justify-content:center}
+  .hero h1{color:#fff;max-width:22ch}
   .hero .kicker{display:inline-block;background:var(--teal);color:#fff;font-weight:700;
     padding:.35em .9em;border-radius:999px;font-size:var(--fs-sm);margin-bottom:1rem;letter-spacing:.02em}
-  .hero p{font-size:var(--fs-body);max-width:52ch;color:#eef4f7}
+  .hero p{font-size:var(--fs-body);max-width:44ch;color:#eef4f7}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:.6rem}
 
   /* Mobile first-screen air (must follow desktop .hero rules so it wins) */
   @media(max-width:700px){
+    .hero { min-height:0; }
     .hero .wrap { padding: 28px 22px calc(36px + 80px + env(safe-area-inset-bottom, 0px)); }
     .hero h1 { max-width:none; letter-spacing:-0.02em; margin: 0 0 0.7rem; text-wrap:balance; }
     .hero-dek-d { max-width:36ch; margin:0 0 1.15rem; color:#eef4f7; }
@@ -298,7 +301,7 @@
         <a aria-current='page' href='index.html' lang='en'>EN</a>
         <a href='index-es.html' lang='es'>ES</a>
       </div>
-      <a class="btn btn-primary header-cta" href="tel:+18059739861">Call (805) 973-9861</a>
+      <a class="btn btn-primary header-cta" href="#contact">See if you qualify</a>
     </div>
   </div>
 </header>
@@ -309,7 +312,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-h">
   <div class="wrap">
-    <span class="kicker">Income-based homes · Walk to the beach</span>
+    <span class="kicker">By the beach</span>
     <h1 id="hero-h">
       <span class="h1-d">Affordable living a short walk from the beach.</span>
       <span class="h1-m">Affordable homes<br>by the beach.</span>
