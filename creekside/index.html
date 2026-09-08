@@ -89,7 +89,7 @@
   .bar{display:flex;align-items:center;gap:16px;min-height:74px}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800}
   .brand .mark{width:42px;height:42px;flex:0 0 auto;border-radius:10px;background:var(--teal);
-    display:grid;place-items:center;color:#fff;font-size:var(--fs-h2)}
+    display:grid;place-items:center;color:#fff;font-size:var(--fs-h2)}.brand .mark svg{display:block}
   .brand b{font-size:var(--fs-body);line-height:1}
   .brand span{display:block;font-size:var(--fs-sm);font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
   .bar .spacer{flex:1}
@@ -275,7 +275,7 @@
 <header class="site">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Creekside Village home">
-      <span class="mark" aria-hidden="true">🌾</span>
+      <span class="mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8c2.8 2.2 5.7 2.2 8.5 0s5.7-2.2 8.5 0"/><path d="M2.5 12c2.8 2.2 5.7 2.2 8.5 0s5.7-2.2 8.5 0"/><path d="M2.5 16c2.8 2.2 5.7 2.2 8.5 0s5.7-2.2 8.5 0"/></svg></span>
       <span><b>Creekside <span class="full-name">Village</span></b><span>Los Alamos · Farmworker Housing</span></span>
     </a>
     <div class="spacer"></div>
