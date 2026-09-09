@@ -23,7 +23,7 @@
     --font-head:'Montserrat','DM Sans',"Segoe UI",system-ui,sans-serif;
   }
   @media (min-width: 701px) {
-    :root { --fs-h1: 2.25rem; }
+    :root { --fs-h1: 2.75rem; }
     .callbar a.tel{display:none}
     .hero-cta a[href^="tel:"]{display:none}
   }
@@ -103,9 +103,9 @@
 
   }
   @media(max-width:560px){ .brand b + span{display:none} }
-  .hero{position:relative;color:#fff;background:#183a29;min-height:68vh;display:flex;align-items:center}
+  .hero{position:relative;color:#fff;background:#183a29;min-height:54vh;display:flex;align-items:center}
   .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,25,.55),rgba(15,35,25,.80)),url("assets/photos/living-room.jpg") center/cover no-repeat;}
-  .hero .wrap{position:relative;width:100%;padding-top:clamp(4.5rem,10vw,7rem);padding-bottom:clamp(4.5rem,10vw,7rem);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .hero .wrap{position:relative;width:100%;padding-top:clamp(3rem,6vw,4.5rem);padding-bottom:clamp(3rem,6vw,4.5rem);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
   .hero h1{color:#fff;max-width:22ch}
   .hero p{font-size:var(--fs-body);max-width:44ch;color:#eef4ef}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:.6rem}
@@ -217,6 +217,10 @@
   .brand .mark, .badge .ic, .amen .ic, .contact-info .ic, .eho .ehlogo,
   .faq summary::after, .modal .close{font-size:var(--fs-h2)}
 
+
+  @media (min-width:701px){
+    .hero p, .hero-dek-d { font-size: var(--fs-h2); font-weight: 500; line-height: 1.35; }
+  }
 </style>
 </head>
 <body>
@@ -248,10 +252,10 @@
 <section class="hero" aria-labelledby="hero-h">
   <div class="wrap">
     <h1 id="hero-h">
-      <span class="h1-d">Viviendas asequibles para trabajadores agrícolas y sus familias.</span>
-      <span class="h1-m">Hogares asequibles<br>para familias del campo.</span>
+      <span class="h1-d">Viviendas asequibles para trabajadores agrícolas y sus familias</span>
+      <span class="h1-m">Hogares asequibles<br>para familias del campo</span>
     </h1>
-    <p class="hero-dek-d">Apartamentos de dos, tres y cuatro recámaras con restricción de ingresos en Los Alamos — con una preferencia para trabajadores del campo que puede adelantar a su familia en la lista de espera.</p>
+    <p class="hero-dek-d">Apartamentos de dos, tres y cuatro recámaras con restricción de ingresos en Los Alamos — con una preferencia para trabajadores del campo que puede adelantar a su familia en la lista de espera</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#contact">Vea si califica</a>
       <a class="btn btn-ghost" href="tel:+18059778817">Llame al (805) 977-8817</a>
